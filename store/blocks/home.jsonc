@@ -1,7 +1,8 @@
 {
   "store.home": { 
     "blocks": [
-      "rich-text"
+      "flex-layout.row#section-one",
+      "flex-layout.row#section-two"
     ]
   },
   "rich-text": { 
@@ -9,7 +10,53 @@
       "text": "VTEX Store Framework",
       "textAlignment": "CENTER",
       "textPosition": "CENTER",
-      "font": "t-heading-1"
+      "font": "t-heading-1",
+      "blockClass":"primera-clase"
+    }
+  },
+  "flex-layout.row#section-one":{
+   "children":[
+    "rich-text"
+   ],
+   "props":{
+    "blockClass":"clase-de-prueba"
+   }  
+  },
+  "flex-layout.row#section-two":{
+    "children":[
+      "flex-layout.col#image-1",
+      "flex-layout.col#image-2"
+    ]
+  },
+  "flex-layout.col#image-1":{
+    "children":[
+      "rich-text#text-izquierda"
+    ]
+  },
+  "rich-text#text-izquierda":{
+    "props":{
+      "text": "este texto es de la columna izquierda",
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "font": "t-heading-2",
+      "blockClass":"textos-secundarios"
+    }
+  },
+  "flex-layout.col#image-2":{
+    "children":[
+      "rich-text#text-derecha"
+    ]
+  },
+  "rich-text#text-derecha":{
+    "props":{
+      "text": "este texto es de la columna Derecha",
+      "textAlignment": "RIGHT",
+      "textPosition": "RIGHT",
+      "font": "t-heading-2",
+      "blockClass":"textos-secundarios"
     }
   }
+
+
+
 }
